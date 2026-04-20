@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .book {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .book h3 {
+            margin: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Online Book Library</h1>
+    <p>Explore your favorite books</p>
+</header>
+
+<div class="container">
+    <div class="book">
+        <h3>The Great Gatsby</h3>
+        <p>Author: F. Scott Fitzgerald</p>
+    </div>
+
+    <div class="book">
+        <h3>To Kill a Mockingbird</h3>
+        <p>Author: Harper Lee</p>
+    </div>
+
+    <div class="book">
+        <h3>1984</h3>
+        <p>Author: George Orwell</p>
+    </div>
+
+    <div class="book">
+        <h3>The Alchemist</h3>
+        <p>Author: Paulo Coelho</p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Book Library</p>
+</footer>
+
+<!-- Watson Assistant Chatbot Integration -->
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "63f9b28f-7ef6-4fbc-aca1-d8205ad814fa", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "63df9709-ade0-491a-a2ce-2ffea9612eef", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
